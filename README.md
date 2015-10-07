@@ -26,6 +26,8 @@ docker run -v /tmp:/tmp -ti olena scribo-cli doc-dia --ocr-lang deu /tmp/input.j
 
 # NOTE: by default, scribo's output format is set to "page-ext", which can't
 # be opened with Prima Research's Page Viewer (JPageViewer 1.1 64bit).
-# You can set the output format to "page" to avoid this problem.
+# You can set the output format to "page" to avoid this problem. Unfortunately,
+# this seems to disable the OCR functionality. I haven't found out why that is, yet.
+#
 docker run -v /tmp:/tmp -ti olena scribo-cli doc-dia --ocr-lang deu --xml-format page /tmp/input.jpg /tmp/output.xml
 ```
